@@ -14,5 +14,7 @@ func main() {
 	fmt.Println(calcurator.Sum(5, 5))
 	fmt.Println(calcurator.Multiply(3, 2))
 	i := 1
+	ui := uint16(2)
 	fmt.Printf("i: %v %T\n", i, i)
+	fmt.Printf("i: %[1]v %[1]T ui: %[2]v %[2]T \n", i, ui)
 }
