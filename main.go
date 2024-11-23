@@ -8,8 +8,19 @@ import (
 	"github.com/joho/godotenv"
 )
 
+const SECRET = "abc"
+
+type Os int
+
+const (
+	Mac Os = iota + 1
+	Windows
+	Linux
+)
+
 func main() {
 	godotenv.Load()
+
 	fmt.Println(os.Getenv("GO_ENV"))
 	fmt.Println(calcurator.Sum(5, 5))
 	fmt.Println(calcurator.Multiply(3, 2))
@@ -20,4 +31,10 @@ func main() {
 
 	pi, title := 3.14, "Go"
 	fmt.Printf("pi: %v title: %v", pi, title)
+
+	fmt.Printf("Mac:%v Windows:%v Linux:%v", Mac, Windows, Linux)
+
+	i += 1
+	fmt.Printf("i: %v %T\n", i, i)
+
 }
